@@ -80,6 +80,8 @@ try:
         fig, ax = plt.subplots(figsize=(8, 4))
         sns.barplot(data=df, x='Cluster', y=col, palette='muted', estimator='mean', ax=ax)
         ax.set_title(f"Average {col} per Cluster")
+        ax.grid(axis='y', linestyle='--', alpha=0.7)  # Horizontal dashed lines
+        ax.grid(axis='both')
         st.pyplot(fig)
 
     # INSIGHTS
